@@ -8,13 +8,13 @@ Anything thats not a true “Adjust Live Z” call wont change the sheet’s z-o
 
 Requirements:
 
-    You have [save_variables] 63 set up
-    You need to call the APPLY_BUILD_SHEET_ADJUSTMENT in your PRINT_START macro after you calibrate your Z offset. This is when the sheet offset is applied.
-    Last but most important: Your PRINT_START macro must set your Z Offset. You can do this with a plugin like CALIBRATE_Z 65. Or, you can add a line to your PRINT_START to reset the Z offset to the correct value for your printer: SET_GCODE_OFFSET Z=0.0. This macro doesn’t try to keep track of the state of the z offset, that’s on you. If you don’t do this the APPLY_BUILD_SHEET_ADJUSTMENT call will apply the same adjustment multiple times and you will crash your printer.
+You have [save_variables] set up
+You need to call the APPLY_BUILD_SHEET_ADJUSTMENT in your PRINT_START macro after you calibrate your Z offset. This is when the sheet offset is applied.
+Last but most important: Your PRINT_START macro must set your Z Offset. You can do this with a plugin like CALIBRATE_Z 65. Or, you can add a line to your PRINT_START to reset the Z offset to the correct value for your printer: SET_GCODE_OFFSET Z=0.0. This macro doesn’t try to keep track of the state of the z offset, that’s on you. If you don’t do this the APPLY_BUILD_SHEET_ADJUSTMENT call will apply the same adjustment multiple times and you will crash your printer.
 
 Nice To Have:
 
-    You’ll probably want to make some small macros for each build sheet you have to make swapping them easy. E.g. :
+You’ll probably want to make some small macros for each build sheet you have to make swapping them easy. E.g. :
 
 [gcode_macro INSTALL_TEXTURED_SHEET]
 gcode:
