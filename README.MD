@@ -1,10 +1,10 @@
 This is a small group of macros that implements Prusa’s Build Sheet system and Adjust Live Z behavior in klipper. Specifically:
 
-    You can have as many build sheets as you like, each with a unique human readable name
-    Each sheet has its own Z offset
-    A sheet can be installed in the printer and this persists across restarts.
-    When you “Adjust Live Z” (AKA Baby Stepping) with your klipper UI of choice the offset change is saved instantly to the sheet that is installed.
-    Anything thats not a true “Adjust Live Z” call wont change the sheet’s z-offset value. You need to set MOVE=1 and ADJUST_Z= in your call to SET_GCODE_OFFSET. This is how Fluidd, Mainsail & Klipper Screen etc do it. All other call patterns wont change the sheet offset.
+You can have as many build sheets as you like, each with a unique human readable name
+Each sheet has its own Z offset
+A sheet can be installed in the printer and this persists across restarts.
+When you “Adjust Live Z” (AKA Baby Stepping) with your klipper UI of choice the offset change is saved instantly to the sheet that is installed.
+Anything thats not a true “Adjust Live Z” call wont change the sheet’s z-offset value. You need to set MOVE=1 and ADJUST_Z= in your call to SET_GCODE_OFFSET. This is how Fluidd, Mainsail & Klipper Screen etc do it. All other call patterns wont change the sheet offset.
 
 Requirements:
 
