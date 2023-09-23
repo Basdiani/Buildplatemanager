@@ -15,9 +15,10 @@ Last but most important: Your PRINT_START macro must set your Z Offset. You can 
 Nice To Have:
 
 You’ll probably want to make some small macros for each build sheet you have to make swapping them easy. E.g. :
-
+```
 [gcode_macro INSTALL_TEXTURED_SHEET]
 gcode:
     INSTALL_BUILD_SHEET NAME="Textured PEI Sheet"
+```
 
     In your PRINT_START you can add a call to SHOW_BUILD_SHEET at the start and end. This prints the build sheet name and offset to the console. This can be helpful and remind you if you forgot to swap sheets!
